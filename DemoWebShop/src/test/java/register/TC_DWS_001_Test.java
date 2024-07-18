@@ -32,7 +32,8 @@ public class TC_DWS_001_Test extends BaseClass4{
 		rp.getPasswordTF().sendKeys(fUtils.getDataFromProperty("rPassword"));
 		rp.getConfirmPasswordTF().sendKeys(fUtils.getDataFromProperty("cPassword"));
 		rp.getRegisterButton().click();
-		Assert.assertEquals(false, rp.getConfirmMessage().isDisplayed(), "Failed to register" ); //failing on purpose
+		Assert.assertEquals(true, rp.getConfirmMessage().isDisplayed(), "Failed to register" );
+		//Assert.assertEquals(false, rp.getConfirmMessage().isDisplayed(), "Failed to register" ); //failing on purpose
 		eWait.until(ExpectedConditions.visibilityOf(rp.getConfirmMessage()));
 		test.log(Status.PASS, "User has registered successfully");
 		

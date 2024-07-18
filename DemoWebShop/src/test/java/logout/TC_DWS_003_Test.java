@@ -2,6 +2,7 @@ package logout;
 
 import java.lang.reflect.Method;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -17,6 +18,8 @@ public class TC_DWS_003_Test extends BaseClass3{
 	{
 		hp=new HomePage(driver);
 		hp.getLogoutLink().click();
-		Assert.assertEquals(true, false, "User has failed to log out"); //failing script on purpose
+		eWait.until(ExpectedConditions.visibilityOf(wp.getLoginLink()));
+		Assert.assertEquals(true, wp.getLoginLink().isDisplayed(), "Failed to add product" );
+		//Assert.assertEquals(false, wp.getLoginLink().isDisplayed(), "Failed to add product" ); //failing on purpose
 		test.log(Status.PASS, "User has logged out successfully");	}
 }

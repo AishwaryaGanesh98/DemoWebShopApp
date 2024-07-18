@@ -18,7 +18,8 @@ public class TC_DWS_005_Test extends BaseClass1 {
 		sp = new ShoppingCartPage(driver);
 		sp.getRemoveFromCartsRB().get(0).click();
 		sp.getUpdateCartButton().click();
-		Assert.assertEquals(false, sp.getEmptyCartMessage().isDisplayed(), "Shopping cart is empty" ); //failing on purpose 
+		Assert.assertEquals(true, sp.getEmptyCartMessage().isDisplayed(), "Failed to delete the product" );
+		//Assert.assertEquals(false, sp.getEmptyCartMessage().isDisplayed(), "Failed to delete the product" ); //failing on purpose 
 		test.log(Status.PASS, "Product is deleted successfully from shopping cart");
 	}
 }

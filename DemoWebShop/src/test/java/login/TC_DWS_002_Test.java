@@ -30,7 +30,8 @@ public class TC_DWS_002_Test extends BaseClass2{
 		lp.getLoginButton().click();
 		eUtils = new ExcelUtility();
 		String expectedTitle = eUtils.getStringDataFromExcel("Home", 1, 0);
-		Assert.assertEquals("login", driver.getTitle(), "User has failed to login");
+		Assert.assertEquals(expectedTitle, driver.getTitle(), "User has failed to login");
+		//Assert.assertEquals("login", driver.getTitle(), "User has failed to login"); //failing on purpose
 		test.log(Status.PASS, "User has logged in successfully");
 	}
 }

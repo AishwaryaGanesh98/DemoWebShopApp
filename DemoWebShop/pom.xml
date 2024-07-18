@@ -33,7 +33,7 @@
 		</dependency>
 	</dependencies>
 	<profiles>
-	<profile>
+		<profile>
 			<id>multiplesuites</id>
 			<build>
 				<plugins>
@@ -52,4 +52,4 @@
 			</build>
 		</profile>
 	</profiles>
-</project>
+</project> 

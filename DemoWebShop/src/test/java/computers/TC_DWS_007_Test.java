@@ -15,10 +15,10 @@ public class TC_DWS_007_Test extends BaseClass1{
 	public void clickOnComputers() throws IOException
 	{
 		hp.getComputersLink().click();
-		/*String expectedTitle = eUtils.getStringDataFromExcel("Computers", 1, 0);
+		String expectedTitle = eUtils.getStringDataFromExcel("Computers", 1, 0);
 		Assert.assertEquals(expectedTitle, driver.getTitle(), "Computers page is not displayed" );
-		Reporter.log("Computers page is displayed", true); //is not used while implementing extent reports instead we use next line */
-		Assert.assertEquals("Computers", driver.getTitle(), "Computers page is not displayed" ); //failing script on purpose to take screenshot using extent reports
+		//Reporter.log("Computers page is displayed", true); //is not used while implementing extent reports instead we use next line 
+		//Assert.assertEquals("Computers", driver.getTitle(), "Computers page is not displayed" ); //failing script on purpose to take screenshot using extent reports
 		test.log(Status.PASS, "Computers page is displayed");
 	}
 }

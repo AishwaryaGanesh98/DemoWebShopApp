@@ -3,17 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="electronics.TC_DWS_008_Test">
+      <class name="logout.TC_DWS_003_Test">
         <methods>
+          <include name="logout" invocation-numbers="0"/>
+          <include name="launchBrowser"/>
           <include name="reportBackup"/>
           <include name="closeBrowser"/>
-          <include name="logout"/>
-          <include name="clickOnElectronics"/>
           <include name="login"/>
           <include name="configReport"/>
-          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- electronics.TC_DWS_008_Test -->
+      </class> <!-- logout.TC_DWS_003_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
